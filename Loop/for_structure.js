@@ -9,9 +9,15 @@
 //     console.log('Total',sum);
 // }
 
-for(let i= 0; i<=10 ; i++){
-    // console.log(i)
-    if(i % 2 ===1){
-        console.log('odd',i);
-    }
+// for(let i= 0; i<=10 ; i++){
+//     // console.log(i)
+//     if(i % 2 ===1){
+//         console.log('odd',i);
+//     }
+// }
+let sum = 0;
+for( let i = 0; i< 10; i++){
+    console.log(i);
+    sum = sum + i;
+    console.log('total',sum);
 }
