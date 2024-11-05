@@ -13,7 +13,7 @@ for( let i= 0; i<details.length; i++){
     reverse= letter + reverse;
     
 }
-// console.log(reverse);]
+// console.log(reverse);
 
 let rev = details.split('').reverse().join('')
 console.log(rev);
