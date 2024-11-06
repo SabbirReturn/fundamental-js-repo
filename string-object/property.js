@@ -10,5 +10,7 @@ console.log(person);
 // dot notation
 const incomeSource = person.profession;
 console.log(incomeSource);
+
+// bracket notation
 const income = person['salary']
 console.log(income);
