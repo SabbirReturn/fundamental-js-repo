@@ -9,10 +9,10 @@ let exam={
     }
 
 }
-console.log(exam);
+// console.log(exam);
 let changeChapter = exam.chapter[1];
-changeChapter = 'forth';
+exam[changeChapter] = 'forth';
 console.log(changeChapter);
 let changeType = exam.type.name;
 changeType = 'mid exam';
-console.log(changeType);
+// console.log(changeType);
