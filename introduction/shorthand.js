@@ -23,3 +23,8 @@ var ticketPrice = 650;
  var name2 = 'Hasan';
  var fullName = name1 + " " + name2;
  console.log(fullName);
+
+
+ var x = '10';
+ var num = parseInt(x)
+ console.log(parseInt (num));
