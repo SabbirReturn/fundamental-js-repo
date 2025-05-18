@@ -125,3 +125,33 @@ function memoize(fn) {
     return result;
   };
 }
+
+Array.prototype.snail = function(rowsCount, colsCount) {
+  const nums = this;
+
+  // If the product of rows and columns doesn't match the array length, return empty array
+  if (rowsCount * colsCount !== nums.length) {
+    return [];
+  }
+
+  // Initialize empty 2D array
+  const matrix = Array.from({ length: rowsCount }, () => Array(colsCount));
+
+  let index = 0;
+
+  for (let col = 0; col < colsCount; col++) {
+    if (col % 2 === 0) {
+      // Fill column top to bottom
+      for (let row = 0; row < rowsCount; row++) {
+        matrix[row][col] = nums[index++];
+      }
+    } else {
+      // Fill column bottom to top
+      for (let row = rowsCount - 1; row >= 0; row--) {
+        matrix[row][col] = nums[index++];
+      }
+    }
+  }
+
+  return matrix;
+};
