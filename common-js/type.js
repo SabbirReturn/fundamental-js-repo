@@ -106,3 +106,22 @@ class TimeLimitedCache {
 
 // Export if needed for testing
 // module.exports = TimeLimitedCache;
+
+/**
+ * @param {Function} fn
+ * @return {Function}
+ */
+function memoize(fn) {
+  const cache = new Map();
+
+  return function(...args) {
+    const key = JSON.stringify(args); // Create a unique key for the argument list
+    if (cache.has(key)) {
+      return cache.get(key); // Return cached result
+    }
+
+    const result = fn(...args); // Call the original function
+    cache.set(key, result);     // Cache the result
+    return result;
+  };
+}
